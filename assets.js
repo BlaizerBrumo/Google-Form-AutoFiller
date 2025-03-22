@@ -367,6 +367,5 @@ module.exports = {
     extractFormData,
     generateRequestBody,
     submitForm,
-    generateBogusSentence,
     debugLog
 };
