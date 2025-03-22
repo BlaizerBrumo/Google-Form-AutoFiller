@@ -1,0 +1,17 @@
+{
+  "name": "google-form-autofiller",
+  "version": "1.0.0",
+  "description": "Extracts metadata from a Google Form and submits a single response using predefined answers.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Blazer",
+  "license": "CC-BY-NC-4.0",
+  "dependencies": {
+    "jsdom": "^25.0.1",
+    "node-fetch": "^2.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlaizerBrumo/Google-Form-AutoFiller"
+  }
+}
