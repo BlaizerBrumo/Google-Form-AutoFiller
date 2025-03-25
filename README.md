@@ -13,6 +13,7 @@ Google Form AutoFiller is a Node.js tool that automates the process of filling a
   - Star Rating
   - Checkboxes
   - Dropdowns
+  - Linear Scale
   - Date
   - Time  
   *(Note: Other question types or answer validations may cause the form to fail.)*
@@ -29,10 +30,10 @@ Requires Node.js v18 or higher.
 
 ## How It Works
 
-The bot automates the process of filling and submitting Google Forms using a combination of data extraction, request body generation, and HTTP requests. Here's a step-by-step explanation:
+The script automates the process of filling and submitting Google Forms using a combination of data extraction, request body generation, and HTTP requests. Here's a step-by-step explanation:
 
 ### 1. Extract Form Data
-When you provide a Google Form URL, the bot:
+When you provide a Google Form URL, the script:
 - Fetches the HTML content using the `node-fetch`.
 - Parses the form's structure with `jsdom` to extract:
   - **`FB_PUBLIC_LOAD_DATA`**:
@@ -43,12 +44,12 @@ When you provide a Google Form URL, the bot:
     - A unique session identifier required for form submission.
 
 ### 2. Generate Request Body
-Using the extracted metadata, the bot:
+Using the extracted metadata, the script:
 - Identifies each question's type and fills in appropriate responses from the configuration.
 - Adds form-specific metadata such as `fbzx`, `fvv`, and `partialResponse`.
 
 ### 3. Submit Form
-The bot sends the generated request body to the Google Form's submission endpoint (`/formResponse`) using an HTTP POST request.
+The script sends the generated request body to the Google Form's submission endpoint (`/formResponse`) using an HTTP POST request.
 
 ---
 
@@ -74,10 +75,6 @@ Customize responses for each question type:
     1: "Example long answer"   // Answer for question at index 1
 }
 ```
-
----
-
-Absolutely — here’s a clean template for documenting key variables used in the Google Form submission process, written in the same style as your `README`. You can fill in more details later if needed.
 
 ---
 
